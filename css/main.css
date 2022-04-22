@@ -22,11 +22,50 @@ body{
   margin-right: auto;
 }
 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button{
+  cursor: pointer;
+}
+
+.bc-img-left{
+  position: absolute;
+  left: -315px;
+  bottom: -560px;
+  z-index: -1;
+}
+
+.bc-img-right{
+  position: absolute;
+  right: -293px;
+  bottom: 91px;
+  z-index: -1;
+}
+
 .wrapper {
+  padding-top: 71px;
+  padding-bottom: 103px;
+}
+
+.block{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .box {
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 65px;
 }
 
@@ -44,13 +83,54 @@ body{
   opacity: 0.5;
 }
 
+.checbox {
+  display: flex;
+  width: 56px;
+  height: 32px;
+  display: flex;
+  padding: 4px;
+  border-radius: 16px;
+  margin-right: 24px;
+  margin-left: 24px;
+  background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  position: relative;
+  transition: margin 0.4s ease;
+}
+
+.annually-input:checked ~ .checbox .span {
+  margin-left: 24px;
+}
+
+
+.monthyl-label,
+.annually-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.span{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.monthyl-input:checked ~ .checbox .annually-label,
+.annually-input:checked ~ .checbox .monthyl-label{
+  z-index: 5;
+}
+
 .hero-list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
   align-items: center;
-
+  position: relative;
 }
 
 .hero-item {
@@ -114,9 +194,11 @@ body{
 }
 
 .hero-item-btn {
+  display: inline-block;
   width: 288px;
   border: 0;
   border-radius: 6px;
+  border: 1px solid transparent;
   padding: 14px 66px;
   font-size: 13px;
   line-height: 16px;
@@ -124,9 +206,22 @@ body{
   text-transform: uppercase;
   color: #fff;
   background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+  transition: border 0.4s ease, color 0.4s ease, background 0.4s ease;
+}
+
+.hero-item-btn:hover{
+  border: 1px solid #6D72DE;
+  color: #6D72DE;
+  background: linear-gradient( white, white);
 }
 
 .new-hero-item-btn {
   color: #6D72DE;
   background: linear-gradient( white, white 100%);
+}
+
+.new-hero-item-btn:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
 }
