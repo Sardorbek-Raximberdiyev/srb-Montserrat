@@ -31,7 +31,7 @@ body{
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 button{
@@ -47,14 +47,15 @@ button{
 
 .bc-img-right{
   position: absolute;
-  right: -293px;
-  bottom: 91px;
+  right: -270px;
+  bottom: 77px;
   z-index: -1;
 }
 
 .wrapper {
   padding-top: 71px;
   padding-bottom: 103px;
+  overflow-y: hidden;
 }
 
 .block{
@@ -138,7 +139,14 @@ button{
   padding: 31px;
   text-align: center;
   background-color: #fff;
+}
+
+.hero-item-left{
   border-radius: 10px 0 0 10px;
+}
+
+.hero-item-right{
+  border-radius: 0 10px 10px 0;
 }
 
 .hero-item div{
@@ -193,6 +201,14 @@ button{
   border-bottom: 1px solid rgba(110, 114, 142, 0.25);
 }
 
+.new-hero-item .hero-item-text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.new-hero-item .hero-item-text:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+}
+
 .hero-item-btn {
   display: inline-block;
   width: 288px;
@@ -202,6 +218,7 @@ button{
   padding: 14px 66px;
   font-size: 13px;
   line-height: 16px;
+  font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: #fff;
